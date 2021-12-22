@@ -2,6 +2,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
+import 'package:loftfin/providers/local_auth_provider.dart';
 import 'package:loftfin/providers/signin_provider.dart';
 import 'package:loftfin/screens/local_auth_screen.dart';
 import 'package:loftfin/screens/phone_verification_screen.dart';
@@ -44,6 +45,7 @@ class MyApp extends StatelessWidget {
     return MultiProvider(
       providers: [
         ChangeNotifierProvider(create: (context) => SignInProvider()),
+        ChangeNotifierProvider(create: (context) => LocalAuthInProvider()),
       ],
       child: StreamProvider<ConnectivityStatus>(
         initialData: ConnectivityStatus.WiFi,

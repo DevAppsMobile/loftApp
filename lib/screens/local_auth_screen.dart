@@ -1,9 +1,12 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:local_auth/local_auth.dart';
+import 'package:loftfin/providers/local_auth_provider.dart';
 import 'package:loftfin/strings.dart';
 import 'package:loftfin/style/app_theme.dart';
 import 'package:loftfin/widgets/custom_button.dart';
 import 'package:loftfin/widgets/regster_screen_header.dart';
+import 'package:provider/provider.dart';
 
 class LocalAuthScreen extends StatefulWidget {
   static String routeName = "/local_auth_screen";
@@ -18,6 +21,8 @@ class _LocalAuthScreenState extends State<LocalAuthScreen> {
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
+    Provider.of<LocalAuthInProvider>(context, listen: false)
+        .getAvailableBiometrics();
     return GestureDetector(
       onTap: () {
         FocusScope.of(context).unfocus();
@@ -48,7 +53,8 @@ class _LocalAuthScreenState extends State<LocalAuthScreen> {
                    width: size.width * 0.3,
                    backgroundColor: AppTheme.themeColor,
                    onClick: () {
-
+                     Provider.of<LocalAuthInProvider>(context, listen: false)
+                         .authenticate();
                    },
                    height: size.height * 0.055,
                  ),
@@ -97,12 +103,19 @@ class _LocalAuthScreenState extends State<LocalAuthScreen> {
             SizedBox(
               height: size.height * 0.03,
             ),
+
             SizedBox(
               height: 60,
               width: 60,
-              child: Image.asset(
+              child:
+              context.read<LocalAuthInProvider>().availableBiometric!=null?
+              context.read<LocalAuthInProvider>().availableBiometric![0]==BiometricType.face?
+              Image.asset(
                 'assets/images/face_id.png',
-              ),
+              ):Icon(
+                  Icons.fingerprint,
+                size:60)
+              :Container(),
             ),
           ],
         ),
@@ -143,4 +156,7 @@ class _LocalAuthScreenState extends State<LocalAuthScreen> {
 //     ),
 //   );
 // }
+
+
+
 }
