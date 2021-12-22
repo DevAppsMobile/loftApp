@@ -46,3 +46,8 @@ const kStringsSendingOtp = 'Sending verification code..';
 const kStringsVerifyingUser = 'Verifying user..';
 const kStringsCreateSuccess = 'User created successfully';
 const kStringsCreateFailed = 'User creation failed';
+const kStringsscan = 'For an external layer of security, we will authenticate you via FaceID When you open the app again,we will use your FaceID.';
+
+const kStringsFaceId = 'Opt Into FaceID';
+
+const kStringsSkip = 'Skip';

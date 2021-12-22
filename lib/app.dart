@@ -3,6 +3,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:loftfin/providers/signin_provider.dart';
+import 'package:loftfin/screens/local_auth_screen.dart';
 import 'package:loftfin/screens/phone_verification_screen.dart';
 import 'package:loftfin/screens/register_screen.dart';
 import 'package:loftfin/screens/signin_screen.dart';
@@ -26,15 +27,15 @@ class MyApp extends StatelessWidget {
       future: _initialization,
       builder: (context, snapshot) {
         // Check for errors
-        if (snapshot.hasError) {
+       /* if (snapshot.hasError) {
           return SomethingWentWrong();
-        }
+        }*/
         // Once complete, show your application
-        if (snapshot.connectionState == ConnectionState.done) {
+        //if (snapshot.connectionState == ConnectionState.done) {
           return app();
-        }
+        //}
         // Otherwise, show something whilst waiting for initialization to complete
-        return Loading();
+       // return Loading();
       },
     );
   }
@@ -60,6 +61,7 @@ class MyApp extends StatelessWidget {
             SplashScreen.routeName: (context) => SplashScreen(),
             WelcomeScreen.routeName: (context) => WelcomeScreen(),
             RegisterScreen.routeName: (context) => RegisterScreen(),
+            LocalAuthScreen.routeName: (context) => LocalAuthScreen(),
             PhoneVerificationScreen.routeName: (context) =>
                 PhoneVerificationScreen(),
             SignInScreen.routeName: (context) => SignInScreen(),

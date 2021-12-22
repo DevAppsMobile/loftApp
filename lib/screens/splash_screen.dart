@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:loftfin/screens/local_auth_screen.dart';
 import 'package:loftfin/screens/welcome_screen.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -23,7 +24,7 @@ class _SplashScreenState extends State<SplashScreen> {
   }
 
   void loadNextScreen() async {
-    Navigator.of(context).pushReplacementNamed(WelcomeScreen.routeName);
+    Navigator.of(context).pushReplacementNamed(LocalAuthScreen.routeName);
   }
 
   @override
