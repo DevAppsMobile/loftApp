@@ -49,5 +49,12 @@ const kStringsCreateFailed = 'User creation failed';
 const kStringsscan = 'For an external layer of security, we will authenticate you via FaceID When you open the app again,we will use your FaceID.';
 
 const kStringsFaceId = 'Opt Into FaceID';
-
+const kStringsLinkYourBank='Link your Bank';
+const kStringsCurrentLofBalance='Current Lofted Balance';
+const kStringsLoftMeCash = 'Loft Me Cash';
+const kStringsSetUp= 'Set Up Monitoring';
+const kStringsBalanceMonitoring='Avoid Late Fees With Low\n Balance Monitoring';
+const kStringsReferFriend='Refer a friend. Earn Another Loft ';
+const kStringsStartFeral= 'Start a Referral';
+const kStringsPhase2='Loft Phase 2';
 const kStringsSkip = 'Skip';

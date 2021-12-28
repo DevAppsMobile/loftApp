@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:loftfin/screens/dash_board_screen.dart';
 import 'package:loftfin/screens/local_auth_screen.dart';
 
 
@@ -24,7 +25,7 @@ class _SplashScreenState extends State<SplashScreen> {
   }
 
   void loadNextScreen() async {
-    Navigator.of(context).pushReplacementNamed(LocalAuthScreen.routeName);
+    Navigator.of(context).pushReplacementNamed(DashBoardScreen.routeName);
   }
 
   @override

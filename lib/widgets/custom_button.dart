@@ -6,6 +6,7 @@ class CustomButton extends StatelessWidget {
   final String title;
   final Color backgroundColor;
   final Function onClick;
+  final Color txtColor;
   final double height;
   const CustomButton({
     required this.title,
@@ -13,13 +14,13 @@ class CustomButton extends StatelessWidget {
     required this.backgroundColor,
     required this.onClick,
     this.height = 50,
+    this.txtColor= Colors.white,
     Key? key,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Material(
+    return Material(
         elevation: 10,
         borderRadius: borderRadius,
         child: InkWell(
@@ -42,14 +43,14 @@ class CustomButton extends StatelessWidget {
                   textAlign: TextAlign.center,
                   style: TextStyle(
                       fontSize: 20,
-                      color: Colors.white,
+                      color:txtColor,
                       fontWeight: FontWeight.w500),
                 ),
               ),
             ),
           ),
         ),
-      ),
+
     );
   }
 

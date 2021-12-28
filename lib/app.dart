@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:loftfin/providers/local_auth_provider.dart';
 import 'package:loftfin/providers/signin_provider.dart';
+import 'package:loftfin/screens/dash_board_screen.dart';
 import 'package:loftfin/screens/local_auth_screen.dart';
 import 'package:loftfin/screens/phone_verification_screen.dart';
 import 'package:loftfin/screens/register_screen.dart';
@@ -64,6 +65,7 @@ class MyApp extends StatelessWidget {
             WelcomeScreen.routeName: (context) => WelcomeScreen(),
             RegisterScreen.routeName: (context) => RegisterScreen(),
             LocalAuthScreen.routeName: (context) => LocalAuthScreen(),
+            DashBoardScreen.routeName:(context) => DashBoardScreen(),
             PhoneVerificationScreen.routeName: (context) =>
                 PhoneVerificationScreen(),
             SignInScreen.routeName: (context) => SignInScreen(),
