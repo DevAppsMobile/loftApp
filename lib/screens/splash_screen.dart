@@ -4,6 +4,10 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:loftfin/screens/dash_board_screen.dart';
 import 'package:loftfin/screens/local_auth_screen.dart';
+import 'package:loftfin/screens/phone_verification_screen.dart';
+
+import 'add_bank_account_screen.dart';
+import 'create_pin_screen.dart';
 
 
 class SplashScreen extends StatefulWidget {
@@ -25,7 +29,7 @@ class _SplashScreenState extends State<SplashScreen> {
   }
 
   void loadNextScreen() async {
-    Navigator.of(context).pushReplacementNamed(DashBoardScreen.routeName);
+    Navigator.of(context).pushReplacementNamed(AddBankAccountScreen.routeName);
   }
 
   @override

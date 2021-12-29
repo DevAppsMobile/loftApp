@@ -14,6 +14,7 @@ class AppTheme {
   static const Color red = Color(0xFFF11717);
   static const Color grey = Color(0xffd9d9d9);
   static const Color darkBlue = Color(0xff081188);
+  static const Color buttonBlue = Color(0xff2c3af1);
 
   static const TextStyle textStyleHeading = TextStyle(
     fontSize: 16,

@@ -58,3 +58,12 @@ const kStringsReferFriend='Refer a friend. Earn Another Loft ';
 const kStringsStartFeral= 'Start a Referral';
 const kStringsPhase2='Loft Phase 2';
 const kStringsSkip = 'Skip';
+const kStringsExtraSecurity = 'Extra Security';
+const kStringsCreatePinInfo =
+    'Create Your Loft PIN. You will use this 4-digit code to authenticate yourself when you open Loft';
+const kStringsSave = 'Save';
+const kStringsBankAccount = 'Bank Accounts';
+const kStringsAddBankAccountInfo = 'You haven\'t added any accounts yet. WE can\'t loft you cash until we know where to send it!';
+const kStringsAddBank = 'Add Bank';
+const kStringsInstantVerification = 'Instant Verification';
+const kStringsContinue = 'Continue';
